@@ -232,13 +232,13 @@ public class TrafficAnimation extends JPanel
 	}
 
 	
-	//Input desired x location and method getWidth() alias width.
+	//Input desired x location.
 		public int dimensionScalerX(int var) {
 			int width = getWidth();
 			int result = ((width/6)*var)/100;
 			return (result);
 		}
-		//Input desired Y location and method getHeight alias, height.
+		//Input desired Y location.
 		public int dimensionScalerY(int var) {
 			int height = getHeight();
 			int result = ((height/4)*var)/100;
