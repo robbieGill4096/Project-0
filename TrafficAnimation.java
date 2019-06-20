@@ -64,9 +64,6 @@ public class TrafficAnimation extends JPanel
 		// Calculate the new xOffset position of the moving object.
 		xOffset  = (xOffset + stepSize) % width;
 		
-		// TODO: Use width, height, and xOffset to draw your scalable objects
-		// at their new positions on the screen
-		
 		
 		//BACKGROUND with SCENERY
 		
@@ -94,8 +91,8 @@ public class TrafficAnimation extends JPanel
 		g.fillOval(dimensionScalerX(250), dimensionScalerY(33), dimensionScalerX(50), dimensionScalerY(33));
 		g.fillOval(dimensionScalerX(280), dimensionScalerY(33), dimensionScalerX(40), dimensionScalerY(27));
 		g.fillOval(dimensionScalerX(300), dimensionScalerY(37), dimensionScalerX(30), dimensionScalerY(20));
-		//cloud left corner of screen
 		
+		//cloud left corner of screen
 		g.setColor(Color.white);
 		g.fillOval(dimensionScalerX(100), dimensionScalerY(47), dimensionScalerX(50), dimensionScalerY(33));
 		g.fillOval(dimensionScalerX(130), dimensionScalerY(47), dimensionScalerX(40), dimensionScalerY(27));
@@ -103,48 +100,45 @@ public class TrafficAnimation extends JPanel
 		
 		//Vehicle SHIP
 		
-		//g.fillRect(xOffset + dimensionScalerX(), dimensionScalerY(), dimensionScalerX(), dimensionScalerY());
-		
 		//main mast
 		Color hullBrown = new Color(65,41,6);
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(170), dimensionScalerY(33), dimensionScalerX(19), dimensionScalerY(167));
 		g.fillRect(xOffset + dimensionScalerX(120), dimensionScalerY(50), dimensionScalerX(100), dimensionScalerY(10));
+		
 		//main sail
 		Color shipSail = new Color(240,234,213);
 		g.setColor(shipSail);
 		g.fillRect(xOffset + dimensionScalerX(120), dimensionScalerY(50), dimensionScalerX(100), dimensionScalerY(100));
+		
 		//ships hull.
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(0), dimensionScalerY(167), dimensionScalerX(300), dimensionScalerY(50));
-		
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(25), dimensionScalerY(200), dimensionScalerX(250), dimensionScalerY(33));
-		
 		g.setColor(Color.BLACK);
 		g.drawRect(xOffset + dimensionScalerX(0), dimensionScalerY(167), dimensionScalerX(300), dimensionScalerY(50));
-		
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(300), dimensionScalerY(167), dimensionScalerX(30), dimensionScalerY(33));
+		
 		//front rig post
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(325), dimensionScalerY(160), dimensionScalerX(20), dimensionScalerY(20));
-		
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(340), dimensionScalerY(146), dimensionScalerX(15), dimensionScalerY(17));
-		
 		g.setColor(Color.BLACK);
 		g.drawRect(xOffset + dimensionScalerX(340), dimensionScalerY(147), dimensionScalerX(15), dimensionScalerY(17));
 		g.setColor(Color.BLACK);
 		g.drawRect(xOffset + dimensionScalerX(25), dimensionScalerY(167), dimensionScalerX(250), dimensionScalerY(10));
 		g.setColor(Color.BLACK);
 		g.drawRect(xOffset + dimensionScalerX(35), dimensionScalerY(177), dimensionScalerX(250), dimensionScalerY(10));
-		
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(350), dimensionScalerY(133), dimensionScalerX(30), dimensionScalerY(16));
+		
 		//cabin.
 		g.setColor(hullBrown);
 		g.fillRect(xOffset + dimensionScalerX(0), dimensionScalerY(135), dimensionScalerX(100), dimensionScalerY(33));
+		
 		// windows.
 		g.setColor(Color.DARK_GRAY);
 		g.fillOval(xOffset + dimensionScalerX(250), dimensionScalerY(183), dimensionScalerX(17), dimensionScalerY(17));
@@ -175,8 +169,7 @@ public class TrafficAnimation extends JPanel
 		int x8 = dimensionScalerX(360);
 		int x9 = dimensionScalerX(340);
 		int x10 = dimensionScalerX(320);
-		
-		
+	
 		//Y values pirate hat
 		int y1 = dimensionScalerY(350);
 		int y2 = dimensionScalerY(337);
@@ -191,6 +184,10 @@ public class TrafficAnimation extends JPanel
 		
 		int[] xPoints = {x1,x2,x3,x4,x5,x6,x7,x8,x9,x10};
 		int[] yPoints = {y1,y2,y3,y4,y5,y6,y7,y8,y9,y10}; 
+		
+		/*creates a polygon based on the ordered x,y values.
+		In this case in the shape of a pirate hat
+		*/
 		g.setColor(Color.BLACK);
 		g.fillPolygon(xPoints, yPoints,10);
 	
@@ -198,12 +195,14 @@ public class TrafficAnimation extends JPanel
 		Color skinColor = new Color(255, 205, 148);
 		g.setColor(skinColor);
 		g.fillOval(dimensionScalerX(325), dimensionScalerY(343), dimensionScalerX(50), dimensionScalerY(57));
+		
 		//eye
 		g.setColor(Color.white);
 		g.fillOval(dimensionScalerX(330), dimensionScalerY(355), dimensionScalerX(15), dimensionScalerY(15));
 		g.setColor(Color.blue);
 		g.fillOval(dimensionScalerX(333), dimensionScalerY(358), dimensionScalerX(10), dimensionScalerY(10));
-		//eye patch eye
+		
+		//eye patch
 		g.setColor(Color.BLACK);
 		g.fillRect(dimensionScalerX(327), dimensionScalerY(355), dimensionScalerX(50), dimensionScalerY(4));
 		g.fillArc(dimensionScalerX(350), dimensionScalerY(343), dimensionScalerX(20), dimensionScalerY(27),180, 180);
@@ -211,11 +210,12 @@ public class TrafficAnimation extends JPanel
 		//mouth
 		g.setColor(Color.BLACK);
 		g.fillArc(dimensionScalerX(342), dimensionScalerY(372), dimensionScalerX(11), dimensionScalerY(11),360,360 );
-		//mustache
 		
+		//mustache
 		Color mustacheBrown = new Color(102,51,0);
 		g.setColor(mustacheBrown);
 		g.fillArc(dimensionScalerX(338), dimensionScalerY(370), dimensionScalerX(20), dimensionScalerY(14),340,210 );
+		
 		// nose
 		g.setColor(skinColor);
 		g.fillRect(dimensionScalerX(345), dimensionScalerY(359),dimensionScalerX(5), dimensionScalerY(15));
@@ -231,14 +231,13 @@ public class TrafficAnimation extends JPanel
 		Toolkit.getDefaultToolkit().sync();
 	}
 
-	
-	//Input desired x location.
+	//Input desired x location you want to scale.
 		public int dimensionScalerX(int var) {
 			int width = getWidth();
 			int result = ((width/6)*var)/100;
 			return (result);
 		}
-		//Input desired Y location.
+		//Input desired Y location you want to scale.
 		public int dimensionScalerY(int var) {
 			int height = getHeight();
 			int result = ((height/4)*var)/100;
