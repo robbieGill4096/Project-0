@@ -17,8 +17,9 @@ import javax.swing.text.StyleConstants.ColorConstants;
  * Animates a [Pirate ship sailing past a salty Sailor]
  *
  * @author BSU CS 121 Instructors
- * @author [Robbie Gill]
+ * @author Robbie Gill
  */
+
 @SuppressWarnings("serial")
 public class TrafficAnimation extends JPanel
 {
@@ -230,7 +231,14 @@ public class TrafficAnimation extends JPanel
 		// Put your code above this line. This makes the drawing smoother.
 		Toolkit.getDefaultToolkit().sync();
 	}
-
+	
+/**
+The dimensionScalerX
+*Scales a value based on the current dimension of the screen.
+*@param var takes a integer value representing an X value and scales it 
+*to the current dimensions of the screen.
+*@retun The equivilant X value for that screen size.
+*/
 	//Input desired x location you want to scale.
 		public int dimensionScalerX(int var) {
 			int width = getWidth();
